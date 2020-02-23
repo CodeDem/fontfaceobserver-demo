@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/fontfaceobserver.js"></script>
+  <script>
+    (function () {
+      document.documentElement.className += " wf-inactive";
+      // Optimization for Repeat Views
+      if (sessionStorage.foutFontsLoaded) {
+        document.documentElement.classList.remove("wf-inactive");
+        document.documentElement.classList.add("wf-active");
+        return;
+      }
+
+      var fontA = new FontFaceObserver("Amstelvar 1.1 VF", {});
+
+
+      Promise.all([fontA.load()]).then(function () {
+        alert(document.documentElement.getAttribute("class"));
+        document.documentElement.classList.remove("wf-inactive");
+        document.documentElement.classList.add("wf-active");
+        alert(document.documentElement.getAttribute("class"));
+
+        // Optimization for Repeat Views
+        sessionStorage.foutFontsLoaded = true;
+      });
+    })();
+  </script>
+</head>
+
+<body>
+  <h1>
+    Hello world
+  </h1>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+/* Amstelvar Variable Font */
+@font-face {
+  font-family: "Amstelvar VF";
+  src: url('../fonts/DecovarAlpha-VF.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Amstelvar 1.1 VF";
+  src: url('../fonts/AmstelvarAlpha-VF_v1.1.ttf') format('truetype');
+  font-display: swap;
+}

@@ -1,0 +1,12 @@
+h1 {
+  font-family: "Amstelvar 1.1 VF", Georgia, 'Times New Roman', Times, serif;
+}
+
+.wf-inactive h1 {
+  font-size: 5rem;
+  font-family:
+    Georgia,
+    'Times New Roman',
+    Times,
+    serif;
+}
